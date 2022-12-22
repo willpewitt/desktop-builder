@@ -18,9 +18,7 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 17
@@ -36,6 +34,5 @@ jobs:
       id: jacoco
       uses: madrapps/jacoco-report@v1.3
       with:
+        paths: ${{ github.workspace }}/build/reports/jacoco/test/jacocoTestReport.xml
         token: ${{ secrets.JACOCO }}
-        path: ${{github.workspace}}/build/reports/jacoco/test/jacocoTestReport.xml
-        min-coverage-overall: 66
