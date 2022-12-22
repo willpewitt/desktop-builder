@@ -1,0 +1,4 @@
+logging:
+  level:
+    org.springframework.boot.autoconfigure: ERROR
+    org.springframework.boot.availability: ERROR
