@@ -28,7 +28,7 @@ public class DesktopBuilderApplication implements CommandLineRunner {
 	public void run(final String... args) throws ParseException {
 		CommandLine commandLine = new DefaultParser().parse(OptionUtil.getOptions(), args);
 
-
+		System.out.println("This is a test");
 		String fileLocation = commandLine.getOptionValue(DesktopOption.LOCATION.getFullName());
 
 		LOG.info("Target program is {}", fileLocation);
